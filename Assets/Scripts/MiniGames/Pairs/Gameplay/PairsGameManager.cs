@@ -26,6 +26,8 @@ namespace MiniGames.Pairs.Gameplay
         private int _foundPairs;
         private bool _gameActive;
 
+        private bool _isProcessingPair = false;
+
         public void StartGame()
         {
             _gameActive = true;
@@ -109,7 +111,7 @@ namespace MiniGames.Pairs.Gameplay
 
         private async UniTask OnCardClicked(PairsCard card)
         {
-            if (!_gameActive || card.IsRevealed) return;
+            if (!_gameActive || card.IsRevealed || _isProcessingPair) return;
 
             card.Reveal();
 
@@ -118,9 +120,9 @@ namespace MiniGames.Pairs.Gameplay
                 _firstCard = card;
             }
             else if (_secondCard == null)
-
             {
                 _secondCard = card;
+                _isProcessingPair = true;
 
                 await UniTask.Delay(1000);
 
@@ -143,6 +145,7 @@ namespace MiniGames.Pairs.Gameplay
 
                 _firstCard = null;
                 _secondCard = null;
+                _isProcessingPair = false;
             }
         }
     }

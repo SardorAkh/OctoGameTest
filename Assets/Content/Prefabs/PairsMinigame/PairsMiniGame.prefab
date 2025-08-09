@@ -396,10 +396,10 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_CellSize: {x: 100, y: 120}
-  m_Spacing: {x: 10, y: 10}
+  m_CellSize: {x: 180, y: 250}
+  m_Spacing: {x: 25, y: 25}
   m_MaxItemsPerRow: 4
   m_CenterRows: 1
-  m_FitCellsToContainer: 1
-  m_AutoCalculateCellSize: 1
-  m_PreferredAspectRatio: 2
+  m_FitCellsToContainer: 0
+  m_AutoCalculateCellSize: 0
+  m_PreferredAspectRatio: 1
