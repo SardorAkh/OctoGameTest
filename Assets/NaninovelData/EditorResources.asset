@@ -411,3 +411,30 @@ MonoBehaviour:
     - name: upset_talk
       pathPrefix: Characters/Ume
       guid: 38d9608d80a9956468f53bd9e212b595
+  - Id: Backgrounds/53ab30b9-1ed3-4251-a893-7e1a04653162
+    Resources: []
+  - Id: Backgrounds/aee84a94-f457-4af5-8dac-a94a69175c9c
+    Resources:
+    - name: Auditorium
+      pathPrefix: Backgrounds/Auditorium
+      guid: 4ea36bdd674dfe847a927d19e3adfcf4
+  - Id: Backgrounds/7045be65-aea6-4340-8b83-6dbc867856b2
+    Resources:
+    - name: Cafeteria
+      pathPrefix: Backgrounds/Cafeteria
+      guid: 0e7d80eb3069d6c4b8aba0acd9a1abd1
+  - Id: Backgrounds/63eec716-9678-4df8-aa55-3b6d4ebb429a
+    Resources:
+    - name: Classroom
+      pathPrefix: Backgrounds/ClassRoom
+      guid: ba38e1887272e8f45b0d206405b032fb
+  - Id: Backgrounds/683ab3b0-40ca-45bc-b88c-ec86b421eabf
+    Resources:
+    - name: Library
+      pathPrefix: Backgrounds/Library
+      guid: 1bbd70a516511e7468bdc9a2649ec0a8
+  - Id: Backgrounds/0ce6d392-5bbb-4808-94d7-2cba742afea6
+    Resources:
+    - name: Principal_Office
+      pathPrefix: Backgrounds/Principal_Office
+      guid: 34e706d8d5dd7f145879c5e2708c9d1a
