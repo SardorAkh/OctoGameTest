@@ -144,3 +144,270 @@ MonoBehaviour:
     - name: ScriptNavigatorUI
       pathPrefix: UI
       guid: 735d6aa767879aa469134858c5b2f0a7
+  - Id: CharacterAvatars
+    Resources: []
+  - Id: Characters/f348d780-972f-4d1b-99d8-3a98846bc957
+    Resources:
+    - name: disgusted
+      pathPrefix: Characters/Chinatsu
+      guid: a22a48a469bf4834a8003d329675f2e9
+    - name: evilsmirk
+      pathPrefix: Characters/Chinatsu
+      guid: 07bd3bd8d21cd82409e46d188e71a1d4
+    - name: frown
+      pathPrefix: Characters/Chinatsu
+      guid: 17ab45ac773a1ba44b5846ceb77389f5
+    - name: happy
+      pathPrefix: Characters/Chinatsu
+      guid: 88f644068e29a1d478aedd248c963cde
+    - name: huh
+      pathPrefix: Characters/Chinatsu
+      guid: 917624af5bc039a40a53ec9d3c4cca87
+    - name: normal
+      pathPrefix: Characters/Chinatsu
+      guid: d8e18e8bfabe33141a2bcab604ecb0cb
+    - name: normalblush
+      pathPrefix: Characters/Chinatsu
+      guid: 648aede1878ee1f4494a9ba61ecfeb37
+    - name: pout
+      pathPrefix: Characters/Chinatsu
+      guid: 88db8f46ddd647a49a4632fc78781815
+    - name: poutangry
+      pathPrefix: Characters/Chinatsu
+      guid: ecb51947a857ed64296167b9848e64b2
+    - name: purp
+      pathPrefix: Characters/Chinatsu
+      guid: a2ef442653d13bb4f864cdb5cc8a84e0
+    - name: talk
+      pathPrefix: Characters/Chinatsu
+      guid: 8aa24bf09996e0e40b79efa0f0cef50c
+    - name: tears
+      pathPrefix: Characters/Chinatsu
+      guid: b9c5341dd9a4a8649826a154553def8e
+    - name: upset
+      pathPrefix: Characters/Chinatsu
+      guid: 9cf839b861eb94742bae8668fe725705
+    - name: upsettalk
+      pathPrefix: Characters/Chinatsu
+      guid: a0623fb01f4a8164f86db6c2fa1ede67
+    - name: blush
+      pathPrefix: Characters/Chinatsu
+      guid: bdedd34602915414eb3f01678351329c
+    - name: angrytalk
+      pathPrefix: Characters/Chinatsu
+      guid: ec352e7de426d4f4690617c3040cf0d2
+    - name: angry
+      pathPrefix: Characters/Chinatsu
+      guid: f02ae6d8d7a3e964f80750d7f5d50bce
+  - Id: Characters/dfa3db46-8601-4c03-96e4-fe2734d17d22
+    Resources:
+    - name: angry
+      pathPrefix: Characters/Kanako
+      guid: cc4ee6ff0cd6f5b49875a0b62c3a999c
+    - name: angrytalk
+      pathPrefix: Characters/Kanako
+      guid: 4938ba04a74ff6d4bb6669d78ff15d54
+    - name: blush
+      pathPrefix: Characters/Kanako
+      guid: 17c479f3c9ae3e64f8488dbfaffe3d57
+    - name: disgusted
+      pathPrefix: Characters/Kanako
+      guid: b396cf317d64d984c847863f959b6301
+    - name: evilsmirk
+      pathPrefix: Characters/Kanako
+      guid: 45dec158d1cfdf843a56b6701f846f03
+    - name: frown
+      pathPrefix: Characters/Kanako
+      guid: c090e5f70929c62418a988ecac15c583
+    - name: happy
+      pathPrefix: Characters/Kanako
+      guid: f67e3bf2ecb795b4b9eb0951b3ecab14
+    - name: huh
+      pathPrefix: Characters/Kanako
+      guid: a29f4140d4deeec41a22987883bca9ea
+    - name: normal
+      pathPrefix: Characters/Kanako
+      guid: fbad14d73f88df94687186129d4c3bc4
+    - name: normalblush
+      pathPrefix: Characters/Kanako
+      guid: b66d11347082b3345abd16c7d7b727d4
+    - name: pout
+      pathPrefix: Characters/Kanako
+      guid: 6a46be7b54964c84e9cb0144677f26e1
+    - name: poutangry
+      pathPrefix: Characters/Kanako
+      guid: 1ba519c5c8640e94697f418a2c9c2a6d
+    - name: purp
+      pathPrefix: Characters/Kanako
+      guid: 780b0c8fbc10e7d4f82bfccdadd835fd
+    - name: talk
+      pathPrefix: Characters/Kanako
+      guid: 3a576f992ee75b94fb49b1e610e95e0e
+    - name: tears
+      pathPrefix: Characters/Kanako
+      guid: d83af627a5cd06545bbd37060901fcd3
+    - name: upset
+      pathPrefix: Characters/Kanako
+      guid: e42997b88acd5614291358065a065ad4
+    - name: upsettalk
+      pathPrefix: Characters/Kanako
+      guid: fb1860812febabf4b8123e5e81d1b8ee
+  - Id: Characters/14668130-168f-4450-9cad-4b3004c59466
+    Resources:
+    - name: angry
+      pathPrefix: Characters/Kohaku
+      guid: d7cdd52b8a0b52f4f9664d313a9cfef8
+    - name: angry_talk
+      pathPrefix: Characters/Kohaku
+      guid: d2ba0e024f40e0d438a434fa7d4b1f31
+    - name: blush
+      pathPrefix: Characters/Kohaku
+      guid: 624f2dd5f26eefe48aa0efe0d782f031
+    - name: disgusted
+      pathPrefix: Characters/Kohaku
+      guid: 0bfb67d3ee08b4a4588d6e27d961ba00
+    - name: evil_smirk
+      pathPrefix: Characters/Kohaku
+      guid: e5d019aea5ebe98418c3675be32a2138
+    - name: frown
+      pathPrefix: Characters/Kohaku
+      guid: bb2178a8c53ae7f4aabe5113ca94371d
+    - name: happy
+      pathPrefix: Characters/Kohaku
+      guid: f48efc7b7bc4b194886cef76d636d5fa
+    - name: huh
+      pathPrefix: Characters/Kohaku
+      guid: 3ca99079e582bc74a9115d061b0d7de5
+    - name: normal
+      pathPrefix: Characters/Kohaku
+      guid: 6efc1b739fdcbf64495574ab75fd7a3f
+    - name: normal_blush
+      pathPrefix: Characters/Kohaku
+      guid: 0a9bae3c4c6ca694995abd5c6eb12890
+    - name: pout
+      pathPrefix: Characters/Kohaku
+      guid: 4a670788d8c05f6449563aaf8fb22027
+    - name: pout_angry
+      pathPrefix: Characters/Kohaku
+      guid: 854ea424e13b447428cc4bdcd22c231b
+    - name: purp
+      pathPrefix: Characters/Kohaku
+      guid: 8c770c31367f23342aad5f7f151e0f09
+    - name: talk
+      pathPrefix: Characters/Kohaku
+      guid: df48ef369f73ba440b6bdcdad91aa2fe
+    - name: tears
+      pathPrefix: Characters/Kohaku
+      guid: 03011526bda5bce46ae06306839a9fe5
+    - name: upset
+      pathPrefix: Characters/Kohaku
+      guid: c101194c93cbc954cb72b1df8fd40159
+    - name: upset_talk
+      pathPrefix: Characters/Kohaku
+      guid: 1c08d55c6c2c6c64db0adb646c6eefb6
+  - Id: Characters/07dea24f-e5cf-4672-868c-0890223a0d46
+    Resources:
+    - name: angry
+      pathPrefix: Characters/Tomomi
+      guid: 6cc98f5675066da488afe6e913da63ff
+    - name: angry_talk
+      pathPrefix: Characters/Tomomi
+      guid: bf123f622327c4f4ca3b7c08e397fa5d
+    - name: blush
+      pathPrefix: Characters/Tomomi
+      guid: 93f36b0cc050a6642a2ef5d358f3f794
+    - name: disgusted
+      pathPrefix: Characters/Tomomi
+      guid: 434b5cb88e43bd84a853ca85da00cb4a
+    - name: evil_smirk
+      pathPrefix: Characters/Tomomi
+      guid: ed07d43df48c82c41b7e4f5d995f0275
+    - name: frown
+      pathPrefix: Characters/Tomomi
+      guid: 3aa6c6a125dd86d48b7ffe67032206dd
+    - name: happy
+      pathPrefix: Characters/Tomomi
+      guid: 8b7afa43028a89f4da0556edca226e6b
+    - name: huh
+      pathPrefix: Characters/Tomomi
+      guid: 373af171ef056fe468fcb47ba19b2af5
+    - name: normal
+      pathPrefix: Characters/Tomomi
+      guid: e33eb971ab9dbef4c9b051fbfeb68b32
+    - name: normal_blush
+      pathPrefix: Characters/Tomomi
+      guid: 63ea2d491b461b440b42e0a4868c80c6
+    - name: pout
+      pathPrefix: Characters/Tomomi
+      guid: 59ca9fe7df12ca54bb0d9cc6900a00d7
+    - name: pout_angry
+      pathPrefix: Characters/Tomomi
+      guid: 83dbc54b26b2c8a44a092b2d398add4b
+    - name: purp
+      pathPrefix: Characters/Tomomi
+      guid: 763d0681d30fc7f4d9ba1214941e3e94
+    - name: talk
+      pathPrefix: Characters/Tomomi
+      guid: 31dbe914b7fdfa241b7e11da3fd54264
+    - name: tears
+      pathPrefix: Characters/Tomomi
+      guid: 0d962be25e923124092927ca43a568d1
+    - name: upset
+      pathPrefix: Characters/Tomomi
+      guid: b6b20a8331bcbe5408739944b3add599
+    - name: upset_talk
+      pathPrefix: Characters/Tomomi
+      guid: 0ddf596ff9e161e4b865a78c0afeaf32
+  - Id: Characters/4552bbb8-b013-4cf9-96e5-e70f297555d8
+    Resources:
+    - name: angry
+      pathPrefix: Characters/Ume
+      guid: 22532f71647ec8b49ac884deaef10af5
+    - name: angry_talk
+      pathPrefix: Characters/Ume
+      guid: a88b38e5fdc2dfd429070c4ca0964348
+    - name: blush
+      pathPrefix: Characters/Ume
+      guid: a66611c9010c3df47bbf6b0055da41f4
+    - name: disgusted
+      pathPrefix: Characters/Ume
+      guid: ad0ff54c224be294e8989e9a1047e145
+    - name: evil_smirk
+      pathPrefix: Characters/Ume
+      guid: 0fda123147303e4498ebaec84ffff478
+    - name: frown
+      pathPrefix: Characters/Ume
+      guid: 651dbc359f378f24f9f8b879bb12ea57
+    - name: happy
+      pathPrefix: Characters/Ume
+      guid: f861654503f73f640bedfeeac5c4a2ef
+    - name: huh
+      pathPrefix: Characters/Ume
+      guid: 38ee1525f8d6d6845b360484a8519bfc
+    - name: normal
+      pathPrefix: Characters/Ume
+      guid: 834693568c8befd48bcd413f1b78449b
+    - name: normal_blush
+      pathPrefix: Characters/Ume
+      guid: 481a4f537e0722b4c99eee9a8775719a
+    - name: pout
+      pathPrefix: Characters/Ume
+      guid: 10062a13c7a7ca142911270b560bf6de
+    - name: pout_angry
+      pathPrefix: Characters/Ume
+      guid: a6190d015ce9b6a479771e5a706c3101
+    - name: purp
+      pathPrefix: Characters/Ume
+      guid: 2fc67f4d9b4808f40bdc524ab7050b13
+    - name: talk
+      pathPrefix: Characters/Ume
+      guid: 561c6fb7716c5d640a0dfdbf089e41c1
+    - name: tears
+      pathPrefix: Characters/Ume
+      guid: d324f1d72ff4e234f84cf049d8f604e8
+    - name: upset
+      pathPrefix: Characters/Ume
+      guid: 31c395e7cc87857409a9ebfd0c0a5c7b
+    - name: upset_talk
+      pathPrefix: Characters/Ume
+      guid: 38d9608d80a9956468f53bd9e212b595
