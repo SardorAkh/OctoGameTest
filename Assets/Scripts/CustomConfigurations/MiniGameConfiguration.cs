@@ -8,6 +8,5 @@ namespace CustomConfigurations
     public class MiniGameConfiguration : Configuration
     {
         [Header("Mini Games Settings")] public List<MiniGameData> miniGames = new();
-        [Header("UI Settings")] public Canvas miniGameCanvas;
     }
 }

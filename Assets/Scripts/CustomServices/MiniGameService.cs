@@ -8,11 +8,11 @@ using UnityEngine;
 
 namespace CustomServices
 {
+    [InitializeAtRuntime]
     public class MiniGameService : IEngineService
     {
         private readonly MiniGameConfiguration _miniGameConfiguration;
         private readonly MiniGameFactory _miniGameFactory;
-        private readonly ICameraManager _cameraManager;
 
         private GameObject _currentGame;
         private IMiniGame _currentGameController;
@@ -20,13 +20,11 @@ namespace CustomServices
         private bool _isGameActive = false;
 
         public MiniGameService(
-            MiniGameConfiguration miniGameConfiguration,
-            ICameraManager cameraManager
+            MiniGameConfiguration miniGameConfiguration
         )
         {
             _miniGameConfiguration = miniGameConfiguration;
-            _cameraManager = cameraManager;
-            _miniGameFactory = new(_cameraManager);
+            _miniGameFactory = new();
         }
 
         public async UniTask InitializeServiceAsync()

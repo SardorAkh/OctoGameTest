@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5266831547606210135}
   - component: {fileID: 1118752067463354466}
   - component: {fileID: 97628996684588636}
-  - component: {fileID: 1751054910801105994}
   - component: {fileID: 2577731882216106015}
   m_Layer: 5
   m_Name: PairsMiniGame
@@ -53,7 +52,7 @@ Canvas:
   m_GameObject: {fileID: 456539478460346519}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -119,42 +118,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1751054910801105994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456539478460346519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24c749d0c675d3940923d50f77b241d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disableInteraction: 0
-  visibleOnAwake: 0
-  controlOpacity: 1
-  fadeTime: 0.3
-  ignoreTimeScale: 1
-  focusObject: {fileID: 0}
-  focusMode: 0
-  onShow:
-    m_PersistentCalls:
-      m_Calls: []
-  onHide:
-    m_PersistentCalls:
-      m_Calls: []
-  hideOnLoad: 1
-  hideInThumbnail: 0
-  saveVisibilityState: 0
-  blockInputWhenVisible: 0
-  adaptToInputMode: 1
-  allowedSamplers: []
-  modalUI: 0
-  modalGroup: 
-  buttonControls: {fileID: 4176798455639103255}
-  controlsLegend: {fileID: 0}
-  fontChangeConfiguration: []
 --- !u!114 &2577731882216106015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,11 +395,11 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_CellSize: {x: 100, y: 120}
   m_Spacing: {x: 10, y: 10}
-  m_MaxItemsPerRow: 0
+  m_MaxItemsPerRow: 4
   m_CenterRows: 1
-  m_FitCellsToContainer: 0
-  m_AutoCalculateCellSize: 0
-  m_PreferredAspectRatio: 1
+  m_FitCellsToContainer: 1
+  m_AutoCalculateCellSize: 1
+  m_PreferredAspectRatio: 2

@@ -1,19 +1,20 @@
 ﻿using CustomServices;
 using Naninovel;
+using UnityEngine;
 
 namespace CustomCommands
 {
-    [Command.CommandAlias("minigame")]
+    [CommandAlias("minigame")]
     public class MiniGameCommand : Command
     {
-        [Command.RequiredParameter] public StringParameter GameId;
-        [Command.ParameterAlias("resultvar")] public StringParameter ResultVariable;
+        [RequiredParameter, ParameterAlias("gameid")] public StringParameter GameId;
+        [ParameterAlias("resultvar")] public StringParameter ResultVariable;
 
 
         public override async UniTask ExecuteAsync(AsyncToken asyncToken = default)
         {
             var service = Engine.GetService<MiniGameService>();
-
+            Debug.Log(service);
             var hasWon = await service.StartGameAsync(GameId);
 
             if (Assigned(ResultVariable))
