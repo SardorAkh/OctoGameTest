@@ -8,11 +8,11 @@ namespace CustomConfigurations.Quest
     {
         public string id;
         public TaskType type;
-        public string target; // npc_id, item_id, location_id
+        public string target;
         public string description;
-        public List<string> requiredTasks = new List<string>(); // ID задач которые должны быть выполнены
+        public List<string> requiredTasks = new List<string>();
         public bool isCompleted;
-        
+
         public bool IsAvailable(List<QuestTask> allTasks)
         {
             if (requiredTasks.Count == 0) return true;
