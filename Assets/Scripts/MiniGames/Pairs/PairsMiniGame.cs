@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using MiniGames.Interfaces;
 using Naninovel;
 using UnityEngine;
@@ -7,11 +8,16 @@ namespace MiniGames.Pairs
 {
     public class PairsMiniGame : MonoBehaviour, IMiniGame
     {
-        public async UniTask<bool> StartGame()
+        public void StartGame()
         {
-            await UniTask.CompletedTask;
-
-            return true;
+            throw new NotImplementedException();
         }
+
+        public void StopGame()
+        {
+            throw new NotImplementedException();
+        }
+
+        public event Action<bool> OnGameFinished;
     }
 }

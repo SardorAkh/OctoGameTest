@@ -1,9 +1,13 @@
-﻿using Naninovel;
+﻿using System;
+using Naninovel;
 
 namespace MiniGames.Interfaces
 {
     public interface IMiniGame
     {
-        UniTask<bool> StartGame();
+        void StartGame();
+        void StopGame();
+
+        event Action<bool> OnGameFinished;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 using CustomConfigurations;
 using MiniGames.Factories;
 using MiniGames.Interfaces;
@@ -12,7 +13,10 @@ namespace CustomServices
         private readonly MiniGameConfiguration _miniGameConfiguration;
         private readonly MiniGameFactory _miniGameFactory;
         private readonly ICameraManager _cameraManager;
+
         private GameObject _currentGame;
+        private IMiniGame _currentGameController;
+        private TaskCompletionSource<bool> _gameResultTask;
         private bool _isGameActive = false;
 
         public MiniGameService(
@@ -66,12 +70,35 @@ namespace CustomServices
             var gameController = _currentGame.GetComponent<IMiniGame>();
 
             _isGameActive = true;
+            _gameResultTask = new TaskCompletionSource<bool>();
 
-            return await gameController.StartGame();
+            gameController.OnGameFinished += OnGameFinished;
+
+            gameController.StartGame();
+
+            var result = await _gameResultTask.Task;
+
+            StopCurrentGame();
+            return result;
+        }
+
+        private void OnGameFinished(bool hasWon)
+        {
+            if (_gameResultTask != null && !_gameResultTask.Task.IsCompleted)
+            {
+                _gameResultTask.SetResult(hasWon);
+            }
         }
 
         private void StopCurrentGame()
         {
+            if (_currentGameController != null)
+            {
+                _currentGameController.OnGameFinished -= OnGameFinished;
+                _currentGameController.StopGame();
+                _currentGameController = null;
+            }
+
             if (_currentGame != null)
             {
                 Object.Destroy(_currentGame);
@@ -79,6 +106,7 @@ namespace CustomServices
             }
 
             _isGameActive = false;
+            _gameResultTask = null;
         }
     }
 }
