@@ -438,3 +438,44 @@ MonoBehaviour:
     - name: Principal_Office
       pathPrefix: Backgrounds/Principal_Office
       guid: 34e706d8d5dd7f145879c5e2708c9d1a
+  - Id: Audio
+    Resources:
+    - name: Library_Theme
+      pathPrefix: Audio
+      guid: 5eb3094783456aa4b8c47de223dac25f
+    - name: Mystery_Theme
+      pathPrefix: Audio
+      guid: b4b0bbfa4abcaf04f8d288affdfed873
+    - name: Office_Theme
+      pathPrefix: Audio
+      guid: 93b0a6e2f2b80b1489f389a21e79a3fb
+    - name: School_Theme
+      pathPrefix: Audio
+      guid: fb4138c86334b8845ad70a381258bead
+    - name: Sports_Theme
+      pathPrefix: Audio
+      guid: c77cea7069b944c41b66ddc50fd7484c
+    - name: Victory_Theme
+      pathPrefix: Audio
+      guid: 4a6114d70044fa74b8fafaea41b36c31
+    - name: Card_Flip
+      pathPrefix: Audio
+      guid: 939c2cdbb42eaf2409763c4b690290a0
+    - name: Card_Match
+      pathPrefix: Audio
+      guid: 84c9a20a3ddf3124cb885d99e845a825
+    - name: Footsteps
+      pathPrefix: Audio
+      guid: 0b47636e01f5d684c9c12ab4dadc4737
+    - name: Item_Get
+      pathPrefix: Audio
+      guid: baa17f4025acb11488d55e559fed8fd4
+    - name: Page_Turn
+      pathPrefix: Audio
+      guid: 62e0c05cefb01b94faffc3dfeb51f79d
+    - name: School_Bell
+      pathPrefix: Audio
+      guid: 35b24447c6727a54aa510f89050ff2da
+    - name: Success_Chime
+      pathPrefix: Audio
+      guid: 970fd8c5dffba2244823a84080fb778f
