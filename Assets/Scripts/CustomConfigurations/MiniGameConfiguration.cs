@@ -2,7 +2,7 @@
 using Naninovel;
 using UnityEngine;
 
-namespace Configurations
+namespace CustomConfigurations
 {
     [EditInProjectSettings]
     public class MiniGameConfiguration : Configuration
