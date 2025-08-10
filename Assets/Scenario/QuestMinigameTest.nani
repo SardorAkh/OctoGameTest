@@ -1,0 +1,55 @@
+
+# Quest + Minigame Integration Test
+
+Welcome to the Quest and Minigame Integration Test!
+
+This test will show how quests can trigger minigames and how the results affect quest progression.
+
+@startQuest questId:"tutorial_quest"
+
+Great! I've started the tutorial quest. Let's complete the first task:
+
+@completeTask "tutorial_quest" task:"talk_to_npc"
+
+Excellent! Now we're at the minigame task. Let's play the pairs minigame:
+
+@minigame gameid:"pairs" resultvar:minigameResult
+
+@if minigameResult
+    Great job! You completed the minigame successfully!
+    Now let's complete the minigame task in the quest:
+    
+    @completeTask "tutorial_quest" task:"play_minigame"
+    
+    @if HasCompletedTask("tutorial_quest" "play_minigame")
+        Perfect! The minigame task is now complete.
+        Your current task is: {GetCurrentTaskDescription("tutorial_quest")}
+    @endif
+@else
+    Oh no! You didn't complete the minigame. Let's try again:
+    
+    @minigame gameid:"pairs" resultvar:minigameResult2
+    
+    @if minigameResult2
+        Great! Second time's the charm!
+        @completeTask "tutorial_quest" task:"play_minigame"
+    @else
+        Don't worry, you can try again later. The quest will wait for you.
+    @endif
+@endif
+
+Now let's complete the final task:
+
+@completeTask "tutorial_quest" task:"visit_location"
+
+@if IsQuestCompleted("tutorial_quest")
+    Congratulations! You've completed the entire tutorial quest!
+    This demonstrates how quests can integrate with minigames for a more interactive experience.
+@endif
+
+# Quest Status Summary
+
+Final Quest Status:
+- Tutorial Quest: @if IsQuestCompleted("tutorial_quest")✅ Completed@else@if IsQuestActive("tutorial_quest")🔄 Active@else❌ Not Started@endif@endif
+
+@stop

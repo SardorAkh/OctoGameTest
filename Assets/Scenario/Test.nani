@@ -1,0 +1,80 @@
+
+
+# Quest System Test
+
+Welcome to the Quest System Test!
+
+Let's start by creating a simple quest for you.
+
+@startQuest questId:"tutorial_quest"
+
+Great! I've started the "Tutorial Quest" for you.
+@showUI QuestSystemUI
+@if IsQuestActive("tutorial_quest")
+    The quest is now active! Your current task is: {GetCurrentTaskDescription("tutorial_quest")}
+@else
+    Something went wrong with starting the quest.
+@endif
+
+Now let's complete the first task:
+
+@completeTask "tutorial_quest" task:"talk_to_npc"
+
+@if "HasCompletedTask("tutorial_quest", "talk_to_npc")"
+    Excellent! You've completed the "Talk to NPC" task.
+@else
+    Task completion didn't work properly.
+@endif
+
+Let's check your current task again:
+
+@if IsQuestActive("tutorial_quest")
+    Your current task is: {GetCurrentTaskDescription("tutorial_quest")}
+@endif
+
+Now let's complete the second task:
+
+@completeTask "tutorial_quest" task:"play_minigame"
+
+@if HasCompletedTask("tutorial_quest" "play_minigame")
+    Great! You've completed the minigame task.
+@endif
+
+Let's complete the final task:
+
+@completeTask "tutorial_quest" task:"visit_location"
+
+@if IsQuestCompleted("tutorial_quest")
+    Congratulations! You've completed the entire tutorial quest!
+@else
+    @if IsQuestActive("tutorial_quest")
+        You still have tasks remaining: {GetCurrentTaskDescription("tutorial_quest")}
+    @else
+        Something went wrong with the quest completion.
+    @endif
+@endif
+
+# Testing Quest Persistence
+
+Let's test if the quest state persists. I'll start a new quest:
+
+@startQuest questId:"advanced_quest"
+
+@if IsQuestActive("advanced_quest")
+    Advanced quest started! Current task: {GetCurrentTaskDescription("advanced_quest")}
+@endif
+
+@completeTask "advanced_quest" task:"collect_item"
+
+@if HasCompletedTask("advanced_quest" "collect_item")
+    Item collected successfully!
+@endif
+
+# Quest Status Summary
+
+Here's your current quest status:
+
+Tutorial Quest: @if IsQuestCompleted("tutorial_quest")Completed@else@if IsQuestActive("tutorial_quest")Active@elseNot Started@endif@endif
+Advanced Quest: @if IsQuestCompleted("advanced_quest")Completed@else@if IsQuestActive("advanced_quest")Active@elseNot Started@endif@endif
+
+@stop

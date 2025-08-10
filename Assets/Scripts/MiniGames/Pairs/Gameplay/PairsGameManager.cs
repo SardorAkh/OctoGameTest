@@ -81,32 +81,6 @@ namespace MiniGames.Pairs.Gameplay
                 cardContainer,
                 (pairsCard) => { OnCardClicked(pairsCard).Forget(); }
             );
-
-            // var cardData = new List<int>();
-            //
-            // for (var i = 0; i < pairsConfig.PairsCount; i++)
-            // {
-            //     cardData.Add(i);
-            //     cardData.Add(i);
-            // }
-            //
-            // for (var i = 0; i < cardData.Count; i++)
-            // {
-            //     var temp = cardData[i];
-            //     var randomIndex = Random.Range(i, cardData.Count);
-            //     cardData[i] = cardData[randomIndex];
-            //     cardData[randomIndex] = temp;
-            // }
-            //
-            // for (var i = 0; i < cardData.Count; i++)
-            // {
-            //     var card = Instantiate(cardPrefab, cardContainer);
-            //
-            //     var cardSprite = pairsConfig.CardSprites[cardData[i] % pairsConfig.CardSprites.Length];
-            //
-            //     card.Initialize(cardData[i], cardSprite, (pairsCard) => { OnCardClicked(pairsCard).Forget(); });
-            //     _cards.Add(card);
-            // }
         }
 
         private async UniTask OnCardClicked(PairsCard card)
