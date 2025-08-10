@@ -1,7 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using CustomConfigurations.Quest;
+using CustomUI.Quest;
+using JetBrains.Annotations;
 using Naninovel;
+using Naninovel.UI;
 using UnityEngine;
 
 namespace CustomServices
@@ -9,21 +13,40 @@ namespace CustomServices
     [InitializeAtRuntime]
     public class QuestService : IEngineService
     {
-        private QuestConfiguration _questConfiguration;
+        private readonly QuestConfiguration _questConfiguration;
+        private readonly ICustomVariableManager _variableManager;
+        private readonly IUIManager _uiManager;
+
         private Dictionary<string, Quest> _activeQuests = new Dictionary<string, Quest>();
-        private ICustomVariableManager _variableManager;
+        private QuestSystemUI _questSystemUI;
 
         public QuestService(
             QuestConfiguration questConfiguration,
-            ICustomVariableManager variableManager
+            ICustomVariableManager variableManager,
+            IUIManager uiManager
         )
         {
             _questConfiguration = questConfiguration;
             _variableManager = variableManager;
+            _uiManager = uiManager;
+
+            var t = uiManager.GetUI<ISettingsUI>();
+            Debug.Log($"QuestService: QuestSystemUI найден: {t != null}");
         }
 
         public async UniTask InitializeServiceAsync()
         {
+            // Debug.Log(_uiManager.GetUI<QuestSystemUI>());
+            // _questSystemUI = _uiManager.GetUI<QuestSystemUI>();
+
+            Debug.Log($"QuestService: _UIManager получен: {_uiManager != null}");
+
+            var uiManager = Engine.GetService<IUIManager>();
+            Debug.Log($"QuestService: UIManager получен: {uiManager != null}");
+
+            var t = uiManager.GetUI<ISettingsUI>();
+            Debug.Log($"QuestService: QuestSystemUI найден: {t != null}");
+
             await UniTask.CompletedTask;
         }
 
@@ -37,6 +60,8 @@ namespace CustomServices
 
             var quest = JsonUtility.FromJson<Quest>(JsonUtility.ToJson(questData));
             _activeQuests[questId] = quest;
+
+            // _questSystemUI.AddQuest(quest);
 
             SaveQuestState(quest);
         }
@@ -54,6 +79,7 @@ namespace CustomServices
                 if (quest.IsCompleted)
                 {
                     _variableManager.SetVariableValue($"quest_{questId}_completed", "true");
+                    // _questSystemUI.RemoveQuest(quest);
                 }
             }
         }
@@ -110,6 +136,14 @@ namespace CustomServices
             }
 
             _activeQuests[questId] = quest;
+        }
+
+        [CanBeNull]
+        public Quest GetActiveQuestById(string questId)
+        {
+            if (!_activeQuests.TryGetValue(questId, out var quest)) return null;
+
+            return quest;
         }
     }
 }

@@ -23,5 +23,11 @@ namespace ExpressionFunctions
             var questManager = Engine.GetService<QuestService>();
             return questManager.HasCompletedTask(questId, taskId);
         }
+
+        public static string GetCurrentTaskDescription(string questId)
+        {
+            var questManager = Engine.GetService<QuestService>();
+            return questManager.GetCurrentTaskDescription(questId);
+        }
     }
 }

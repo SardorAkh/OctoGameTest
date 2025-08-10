@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CustomConfigurations.Quest
 {
+    [Serializable]
     public class Quest
     {
         public string Id;
