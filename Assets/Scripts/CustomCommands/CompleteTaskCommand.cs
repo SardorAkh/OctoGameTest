@@ -17,16 +17,22 @@ namespace CustomCommands
         {
             var questService = Engine.GetService<QuestService>();
             questService.CompleteTask(QuestId, TaskId);
-            
+
             var uiManager = Engine.GetService<IUIManager>();
             var questSystemUI = uiManager.GetUI<QuestSystemUI>();
             var quest = questService.GetActiveQuestById(QuestId);
+            var task = questService.GetCurrentQuestTask(QuestId);
 
             if (quest != null)
             {
                 questSystemUI.RemoveQuest(quest);
             }
-            
+
+            if (task != null)
+            {
+                questSystemUI.AddQuest(quest);
+            }
+
             await UniTask.CompletedTask;
         }
     }

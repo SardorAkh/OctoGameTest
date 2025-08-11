@@ -15,38 +15,19 @@ namespace CustomServices
     {
         private readonly QuestConfiguration _questConfiguration;
         private readonly ICustomVariableManager _variableManager;
-        private readonly IUIManager _uiManager;
-
         private Dictionary<string, Quest> _activeQuests = new Dictionary<string, Quest>();
-        private QuestSystemUI _questSystemUI;
 
         public QuestService(
             QuestConfiguration questConfiguration,
-            ICustomVariableManager variableManager,
-            IUIManager uiManager
+            ICustomVariableManager variableManager
         )
         {
             _questConfiguration = questConfiguration;
             _variableManager = variableManager;
-            _uiManager = uiManager;
-
-            var t = uiManager.GetUI<ISettingsUI>();
-            Debug.Log($"QuestService: QuestSystemUI найден: {t != null}");
         }
 
         public async UniTask InitializeServiceAsync()
         {
-            // Debug.Log(_uiManager.GetUI<QuestSystemUI>());
-            // _questSystemUI = _uiManager.GetUI<QuestSystemUI>();
-
-            Debug.Log($"QuestService: _UIManager получен: {_uiManager != null}");
-
-            var uiManager = Engine.GetService<IUIManager>();
-            Debug.Log($"QuestService: UIManager получен: {uiManager != null}");
-
-            var t = uiManager.GetUI<ISettingsUI>();
-            Debug.Log($"QuestService: QuestSystemUI найден: {t != null}");
-
             await UniTask.CompletedTask;
         }
 
@@ -60,8 +41,6 @@ namespace CustomServices
 
             var quest = JsonUtility.FromJson<Quest>(JsonUtility.ToJson(questData));
             _activeQuests[questId] = quest;
-
-            // _questSystemUI.AddQuest(quest);
 
             SaveQuestState(quest);
         }
@@ -79,9 +58,14 @@ namespace CustomServices
                 if (quest.IsCompleted)
                 {
                     _variableManager.SetVariableValue($"quest_{questId}_completed", "true");
-                    // _questSystemUI.RemoveQuest(quest);
                 }
             }
+        }
+
+        public QuestTask GetCurrentQuestTask(string questId)
+        {
+            if (!_activeQuests.TryGetValue(questId, out var quest)) return null;
+            return quest.GetCurrentTask();
         }
 
         public string GetCurrentTaskDescription(string questId)
@@ -141,9 +125,7 @@ namespace CustomServices
         [CanBeNull]
         public Quest GetActiveQuestById(string questId)
         {
-            if (!_activeQuests.TryGetValue(questId, out var quest)) return null;
-
-            return quest;
+            return _activeQuests.GetValueOrDefault(questId);
         }
     }
 }

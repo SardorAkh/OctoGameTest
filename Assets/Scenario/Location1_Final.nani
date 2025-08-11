@@ -1,0 +1,147 @@
+; Локация 1 - Финальный выбор
+@back Library time:2
+@bgm Mystery_Theme volume:0.6
+
+@char Ume.normal pos:50
+
+Ume.normal: {player_name}! Ты вернулся!
+
+@char Ume.talk
+
+Ume.talk: Судя по твоей ауре, поиски увенчались успехом.
+
+Player: Да, я нашел Кристальный Ключ.
+
+@char Ume.happy
+
+Ume.happy: Превосходно! Теперь отдай его мне, и я смогу...
+
+@char Chinatsu.normal pos:20
+
+Внезапно в библиотеку заходит Чинацу!
+
+Chinatsu.normal: Не торопись, Уме.
+
+@char Ume.angry
+
+Ume.angry: Чинацу! Как ты посмела вмешиваться!
+
+@char Chinatsu.angry_talk
+
+Chinatsu.angry_talk: {player_name} имеет право знать правду!
+
+@char Chinatsu.normal
+
+Chinatsu.normal: Уме хочет использовать ключ, чтобы открыть врата в мир теней!
+
+@char Ume.evil_smirk
+
+Ume.evil_smirk: И что в этом плохого? Там скрыты древние знания!
+
+@char Chinatsu.upset
+
+Chinatsu.upset: А также древние ужасы, которые лучше оставить запертыми!
+
+@char Ume.frown
+
+Ume.frown: Ты слишком трусливая, чтобы понять величие истинной магии!
+
+@char Chinatsu.normal
+
+Chinatsu.normal: {player_name}, выбор за тобой.
+
+@completeTask questId:"main_quest" task:"make_final_choice"
+
+Настал момент истины. Кому ты доверишь Кристальный Ключ?
+
+@choice "Отдать ключ Уме" set:artifact_choice="ume" goto:.give_ume
+@choice "Отдать ключ Чинацу" set:artifact_choice="chinatsu" goto:.give_chinatsu  
+@choice "Оставить ключ себе" set:artifact_choice="keep" goto:.keep_key
+@stop
+
+# give_ume
+Player: Уме, я доверяю твоей мудрости.
+
+Ты достаешь кристалл и протягиваешь его библиотекарю.
+
+@char Ume.happy
+
+Ume.happy: Отличный выбор! Ты не пожалеешь!
+
+@char Chinatsu.upset
+
+Chinatsu.upset: {player_name}... я надеялась, что ты поступишь иначе.
+
+@char Chinatsu.frown
+
+Chinatsu.frown: Но твой выбор сделан. Остается только надеяться на лучшее.
+
+@hide Chinatsu time:1
+
+@char Ume.evil_smirk
+
+Ume.evil_smirk: Наконец-то! Врата откроются, и древние знания станут моими!
+
+@goto .end
+
+# give_chinatsu  
+Player: Чинацу, ты предупреждала меня об опасности. Я доверяю тебе.
+
+Ты достаешь кристалл и отдаешь его девушке.
+
+@char Chinatsu.happy
+
+Chinatsu.happy: Спасибо! Ты принял мудрое решение!
+
+@char Ume.angry
+
+Ume.angry: Глупец! Ты понятия не имеешь, что упускаешь!
+
+@char Chinatsu.normal
+
+Chinatsu.normal: Не волнуйся, Уме. Ключ будет в безопасности.
+
+@char Ume.frown
+
+Ume.frown: Это еще не конец...
+
+@hide Ume time:1
+
+@char Chinatsu.blush
+
+Chinatsu.blush: {player_name}, благодаря тебе мир остался в безопасности.
+
+@goto .end
+
+# keep_key
+Player: Я думаю... такая сила не должна принадлежать никому из вас.
+
+Player: Я сам буду нести ответственность за Кристальный Ключ.
+
+@char Ume.disgusted
+
+Ume.disgusted: Что?! Ты не понимаешь силы этого артефакта!
+
+@char Chinatsu.huh
+
+Chinatsu.huh: {player_name}... это очень опасная ноша...
+
+Player: Я понимаю. Но может быть, именно поэтому я должен стать его хранителем.
+
+@char Ume.angry
+
+Ume.angry: Ты пожалеешь об этом решении!
+
+@hide Ume time:1
+
+@char Chinatsu.normal
+
+Chinatsu.normal: Возможно... ты прав. 
+
+@char Chinatsu.blush
+
+Chinatsu.blush: В тебе действительно есть что-то особенное.
+
+# end
+@wait 2
+@goto Epilogue

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: MiniGameConfiguration
   m_EditorClassIdentifier: 
   miniGames:
-  - GameId: pairs
+  - GameId: pairs_game
     DisplayName: Pairs
     MiniGamePrefab: {fileID: 456539478460346519, guid: d325b252e41f87c4a9834b6d006d9eb9, type: 3}

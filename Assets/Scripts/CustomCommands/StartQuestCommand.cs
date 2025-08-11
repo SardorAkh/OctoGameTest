@@ -1,6 +1,7 @@
 ﻿using CustomServices;
 using CustomUI.Quest;
 using Naninovel;
+using UnityEngine;
 
 namespace CustomCommands
 {
@@ -22,7 +23,6 @@ namespace CustomCommands
             if (quest != null)
             {
                 questSystemUI.AddQuest(quest);
-                questSystemUI.Show();
             }
 
             await UniTask.CompletedTask;

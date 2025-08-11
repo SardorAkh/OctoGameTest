@@ -1,0 +1,97 @@
+; Локация 1 - Первая встреча с НПЦ-1 (Ume)
+@back Library time:2
+@bgm Library_Theme volume:0.5
+
+@char Ume.normal pos:50
+
+Ume.normal: Добро пожаловать в библиотеку академии, {player_name}.
+
+Player: Откуда вы знаете мое имя?
+
+@char Ume.evil_smirk
+
+Ume.evil_smirk: В этих стенах мало что остается тайной...
+
+@char Ume.normal
+
+Ume.normal: Меня зовут Уме. Я хранитель этой библиотеки уже много лет.
+
+Player: Приятно познакомиться. Мне нужны учебники для первого курса.
+
+@char Ume.talk
+
+Ume.talk: Конечно, но сначала позволь рассказать тебе кое-что важное.
+
+@char Ume.normal
+
+Ume.normal: В нашей академии происходят... странные вещи.
+
+@char Ume.frown
+
+Ume.frown: Студенты находят предметы, которые не должны существовать.
+
+@char Ume.normal
+
+Ume.normal: Я ищу особый артефакт - Кристальный Ключ.
+
+@char Ume.talk
+
+Ume.talk: Он обладает способностью открывать врата между мирами.
+
+Player: Это звучит как сказка...
+
+@char Ume.evil_smirk
+
+Ume.evil_smirk: В этом мире сказки иногда становятся реальностью.
+
+@char Ume.normal
+
+Ume.normal: Помоги мне найти этот ключ, {player_name}.
+
+@choice "Согласиться помочь" goto:.agree
+@choice "Отказаться" goto:.refuse
+@stop
+
+# agree
+@completeTask questId:"main_quest" task:"talk_to_npc1"
+
+Player: Хорошо, я помогу вам найти этот артефакт.
+
+@char Ume.happy
+
+Ume.happy: Отлично! Для начала отправляйся в 3-А класс.
+
+@char Ume.talk
+
+Ume.talk: Там ты встретишь Чинацу. Она... особенная студентка.
+
+@char Ume.normal
+
+Ume.normal: Возможно, она знает больше, чем показывает.
+
+@goto .end
+
+# refuse
+Player: Извините, но это звучит слишком странно.
+
+@char Ume.frown
+
+Ume.frown: Понимаю твои сомнения...
+
+@char Ume.normal
+
+Ume.normal: Но рано или поздно тебе придется сделать выбор.
+
+@char Ume.talk
+
+Ume.talk: Когда будешь готов, найди Чинацу в 3-А классе.
+
+@completeTask questId:"main_quest" task:"talk_to_npc1"
+
+# end
+Player: Я понял. Увидимся позже.
+
+@hide Ume time:1
+
+@wait 2
+@goto Location2_Meeting

@@ -144,6 +144,9 @@ MonoBehaviour:
     - name: ScriptNavigatorUI
       pathPrefix: UI
       guid: 735d6aa767879aa469134858c5b2f0a7
+    - name: QuestSystemUI
+      pathPrefix: UI
+      guid: 7838c969026eeed4aab40c910b08d455
   - Id: CharacterAvatars
     Resources: []
   - Id: Characters/f348d780-972f-4d1b-99d8-3a98846bc957
@@ -193,7 +196,7 @@ MonoBehaviour:
     - name: blush
       pathPrefix: Characters/Chinatsu
       guid: bdedd34602915414eb3f01678351329c
-    - name: angrytalk
+    - name: angry_talk
       pathPrefix: Characters/Chinatsu
       guid: ec352e7de426d4f4690617c3040cf0d2
     - name: angry
@@ -412,31 +415,15 @@ MonoBehaviour:
       pathPrefix: Characters/Ume
       guid: 38d9608d80a9956468f53bd9e212b595
   - Id: Backgrounds/53ab30b9-1ed3-4251-a893-7e1a04653162
-    Resources: []
-  - Id: Backgrounds/aee84a94-f457-4af5-8dac-a94a69175c9c
-    Resources:
-    - name: Auditorium
-      pathPrefix: Backgrounds/Auditorium
-      guid: 4ea36bdd674dfe847a927d19e3adfcf4
-  - Id: Backgrounds/7045be65-aea6-4340-8b83-6dbc867856b2
-    Resources:
-    - name: Cafeteria
-      pathPrefix: Backgrounds/Cafeteria
-      guid: 0e7d80eb3069d6c4b8aba0acd9a1abd1
-  - Id: Backgrounds/63eec716-9678-4df8-aa55-3b6d4ebb429a
-    Resources:
-    - name: Classroom
-      pathPrefix: Backgrounds/ClassRoom
-      guid: ba38e1887272e8f45b0d206405b032fb
-  - Id: Backgrounds/683ab3b0-40ca-45bc-b88c-ec86b421eabf
     Resources:
     - name: Library
-      pathPrefix: Backgrounds/Library
+      pathPrefix: Backgrounds/MainBackground
       guid: 1bbd70a516511e7468bdc9a2649ec0a8
-  - Id: Backgrounds/0ce6d392-5bbb-4808-94d7-2cba742afea6
-    Resources:
+    - name: Classroom
+      pathPrefix: Backgrounds/MainBackground
+      guid: ba38e1887272e8f45b0d206405b032fb
     - name: Principal_Office
-      pathPrefix: Backgrounds/Principal_Office
+      pathPrefix: Backgrounds/MainBackground
       guid: 34e706d8d5dd7f145879c5e2708c9d1a
   - Id: Audio
     Resources:
@@ -479,3 +466,28 @@ MonoBehaviour:
     - name: Success_Chime
       pathPrefix: Audio
       guid: 970fd8c5dffba2244823a84080fb778f
+  - Id: Scripts
+    Resources:
+    - name: Start
+      pathPrefix: Scripts
+      guid: c602509364cb9344aa42acf3f9b57d12
+    - name: Location1_Initial
+      pathPrefix: Scripts
+      guid: 92623dfe7ae173f4b9301464b0b94748
+    - name: Location2_Meeting
+      pathPrefix: Scripts
+      guid: 18edb5805244e4845b8d8ed13026c22b
+    - name: Location2_Return
+      pathPrefix: Scripts
+      guid: b59c69cc54069e541b9072f9c9a92486
+    - name: Location3_Artifact
+      pathPrefix: Scripts
+      guid: 19c6d74c3d43d0e4fad35fad04bf6bb8
+    - name: Location1_Final
+      pathPrefix: Scripts
+      guid: 31ce98728f247db4d9d250a73d460767
+    - name: Epilogue
+      pathPrefix: Scripts
+      guid: 37e5fcdd0a65e3041a38f5efd32d1a10
+  - Id: Characters/6cab344d-8dba-49f1-a2fd-d468640b43c9
+    Resources: []
