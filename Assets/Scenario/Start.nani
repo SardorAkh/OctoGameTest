@@ -1,0 +1,33 @@
+; Начальный сценарий - выбор имени и завязка
+@stopBgm
+@back Library time:0
+@bgm Mystery_Theme volume:0.6
+
+; Инициализация переменных
+@set player_name=""
+@set minigame_result=false
+@set artifact_choice=""
+
+Добро пожаловать в академию "Серебряная Звезда"...
+
+Древние стены этого учебного заведения хранят множество тайн.
+
+@input player_name summary:"Как тебя зовут, новый ученик?"
+@stop
+
+@if player_name==""
+    @set player_name="Незнакомец"
+@endif
+
+Приятно познакомиться, {player_name}!
+
+Ты только что поступил в эту престижную академию.
+
+Говорят, что в её стенах скрыты древние артефакты...
+
+Но сейчас тебе нужно освоиться и найти библиотеку для получения учебников.
+@showUI QuestSystemUI
+@startQuest questId:"main_quest"
+@stopBgm
+@wait 1
+@goto Location1_Initial

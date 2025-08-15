@@ -1,0 +1,66 @@
+@stopBgm
+@back Library time:2
+@bgm Library_Theme volume:0.5
+
+@char Ume.normal pos:50
+
+Ume.normal: {player_name}! Ты говорил с Чинацу?
+
+@choice "Да, она рассказала интересные вещи" goto:.told_things
+@choice "Она предупреждала меня о тебе" goto:.warned
+@choice "Где находится кабинет директора?" goto:.director
+@stop
+
+# told_things
+Player: Да, она рассказала кое-что интересное о Кристальном Ключе.
+
+@char Ume.happy
+
+Ume.happy: Отлично! Теперь ты понимаешь важность нашей миссии.
+
+@char Ume.talk
+
+Ume.talk: Кабинет директора находится на третьем этаже. Там и нужно искать артефакт.
+
+@goto .end
+
+# warned
+Player: Она предупреждала меня быть осторожным с тобой.
+
+@char Ume.frown
+
+Ume.frown: Типично для неё... Чинацу всегда была слишком осторожной.
+
+@char Ume.normal
+
+Ume.normal: Но ты же понимаешь, что знания - это сила, а сила нужна для добра?
+
+@char Ume.talk
+
+Ume.talk: Иди в кабинет директора и найди ключ. Тогда сам всё поймешь.
+
+@goto .end
+
+# director
+Player: Чинацу сказала, что ключ в кабинете директора. Как туда попасть?
+
+@char Ume.talk
+
+Ume.talk: Третий этаж, в конце коридора. Дверь должна быть открыта.
+
+@char Ume.normal
+
+Ume.normal: Директор редко бывает на месте в это время.
+
+@char Ume.evil_smirk
+
+Ume.evil_smirk: Идеальная возможность для поиска артефакта.
+
+# end
+Player: Спасибо за информацию.
+
+@hide Ume time:1
+
+@showUI MapUI
+@stopBgm
+@stop

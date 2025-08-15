@@ -1,0 +1,164 @@
+@stopBgm
+@back Classroom time:2
+@bgm School_Theme volume:0.5
+
+@char Chinatsu.normal pos:50
+
+Chinatsu.normal: О! Ты, должно быть, новенький - {player_name}?
+
+Player: Да, это я. Ты Чинацу?
+
+@char Chinatsu.happy
+
+Chinatsu.happy: Верно! Добро пожаловать в нашу академию!
+
+@char Chinatsu.talk
+
+Chinatsu.talk: Уме отправила тебя ко мне, верно?
+
+Player: Откуда ты знаешь?
+
+@char Chinatsu.blush
+
+Chinatsu.blush: Ну... скажем так, у меня есть свои источники информации.
+
+@char Chinatsu.normal
+
+Chinatsu.normal: Слушай, я знаю о Кристальном Ключе.
+
+@char Chinatsu.frown
+
+Chinatsu.frown: Но прежде чем рассказать больше, мне нужно убедиться в твоих способностях.
+
+Player: Как именно?
+
+@char Chinatsu.happy
+
+Chinatsu.happy: Сыграем в мою любимую игру - парные карточки!
+
+@char Chinatsu.talk
+
+Chinatsu.talk: Она не только развивает память, но и показывает твою интуицию.
+
+@choice "Согласиться на игру" goto:.play
+@choice "Спросить зачем это нужно" goto:.ask
+@stop
+
+# ask
+Player: Зачем нам играть? Разве нельзя просто поговорить?
+
+@char Chinatsu.pout
+
+Chinatsu.pout: Кристальный Ключ - это не обычный предмет!
+
+@char Chinatsu.angry_talk
+
+Chinatsu.angry_talk: Он реагирует на ментальную энергию и интуицию!
+
+@char Chinatsu.normal
+
+Chinatsu.normal: Мне нужно знать, что ты готов к тому, что тебя ждет.
+
+# play
+@completeTask questId:"main_quest" task:"find_npc2"
+
+Player: Хорошо, давай попробуем.
+
+@char Chinatsu.happy
+
+Chinatsu.happy: Отлично! Правила простые - найди все пары карточек.
+
+@stopBgm time:0.5
+@bgm Sports_Theme volume:0.4
+
+@minigame gameid:"pairs_game" resultvar:"minigame_result"
+
+@completeTask questId:"main_quest" task:"play_minigame"
+
+@stopBgm time:0.5
+@bgm School_Theme volume:0.5
+
+@if minigame_result=="true"
+    @char Chinatsu.happy
+    
+    Chinatsu.happy: Впечатляюще! У тебя действительно есть способности!
+    
+    @char Chinatsu.blush
+    
+    Chinatsu.blush: Я чувствую в тебе особую ауру...
+@else
+    @char Chinatsu.normal
+    
+    Chinatsu.normal: Ничего, результат не важен.
+    
+    @char Chinatsu.talk
+    
+    Chinatsu.talk: Главное - ты попытался, и это многое говорит о твоем характере.
+@endif
+
+@char Chinatsu.normal
+
+Chinatsu.normal: Теперь я могу рассказать тебе правду.
+
+@char Chinatsu.frown
+
+Chinatsu.frown: Кристальный Ключ действительно находится в академии.
+
+@char Chinatsu.talk
+
+Chinatsu.talk: Последний раз его видели в кабинете директора.
+
+@char Chinatsu.normal
+
+Chinatsu.normal: Но будь осторожен - я не единственная, кто его ищет.
+
+Player: Что ты имеешь в виду?
+
+@char Chinatsu.upset
+
+Chinatsu.upset: Уме... она не та, кем кажется.
+
+@char Chinatsu.angry_talk
+
+Chinatsu.angry_talk: У неё свои планы относительно артефакта!
+
+@char Chinatsu.normal
+
+Chinatsu.normal: Обещай мне - если найдешь ключ, подумай дважды, прежде чем отдавать его ей.
+
+@choice "Обещаю быть осторожным" goto:.promise
+@choice "А тебе можно доверять?" goto:.doubt
+@stop
+
+# promise
+Player: Хорошо, я буду осторожен.
+
+@char Chinatsu.happy
+
+Chinatsu.happy: Спасибо! Я знала, что в тебе есть что-то особенное.
+
+@goto .end
+
+# doubt
+Player: А почему я должен доверять тебе больше, чем Уме?
+
+@char Chinatsu.blush
+
+Chinatsu.blush: Ты прав, сомневаться нормально...
+
+@char Chinatsu.normal
+
+Chinatsu.normal: Просто помни - сила может исправлять, но может и разрушать.
+
+# end
+@char Chinatsu.talk
+
+Chinatsu.talk: Удачи тебе, {player_name}. Мы еще встретимся.
+
+@hide Chinatsu time:1
+
+Теперь кабинет директора открыт для посещения.
+
+@showUI MapUI
+@stopBgm
+@stop

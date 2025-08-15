@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98aa4b58b11e9d4ca9dd8a4bf7bb71d, type: 3}
+  m_Name: ScriptGraphState
+  m_EditorClassIdentifier: 
+  NodesState:
+  - scriptName: Start
+    position:
+      serializedVersion: 2
+      x: 477
+      y: 0
+      width: 276
+      height: 128
+  - scriptName: Location1_Initial
+    position:
+      serializedVersion: 2
+      x: 306
+      y: 0
+      width: 151
+      height: 221
+  - scriptName: Location2_Meeting
+    position:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 160
+      height: 317
+  - scriptName: Location2_Return
+    position:
+      serializedVersion: 2
+      x: 988
+      y: 0
+      width: 162
+      height: 293
+  - scriptName: Location3_Artifact
+    position:
+      serializedVersion: 2
+      x: 773
+      y: 0
+      width: 195
+      height: 437
+  - scriptName: Location1_Final
+    position:
+      serializedVersion: 2
+      x: 0
+      y: 317
+      width: 165
+      height: 293
+  - scriptName: Epilogue
+    position:
+      serializedVersion: 2
+      x: 0
+      y: 610
+      width: 276
+      height: 333
+  - scriptName: Title
+    position:
+      serializedVersion: 2
+      x: 0
+      y: 943
+      width: 71
+      height: 77

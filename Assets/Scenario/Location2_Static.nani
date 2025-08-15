@@ -1,0 +1,67 @@
+; Location2_Static.nani - Статичная версия класса после завершения квеста
+@stopBgm time:0.5
+@back Classroom time:2
+@bgm School_Theme volume:0.5
+
+@if artifact_choice=="chinatsu"
+    @char Chinatsu.happy pos:50
+    
+    Chinatsu.happy: {player_name}! Как дела?
+    
+    Chinatsu.talk: Кристальный Ключ надежно спрятан. Мир в безопасности.
+    
+    @choice "Расспросить о защитных мерах" goto:.protection
+    @choice "Вернуться к карте" goto:.map
+@elseif artifact_choice=="ume"
+    @char Chinatsu.upset pos:50
+    
+    Chinatsu.upset: {player_name}... я надеюсь, ты знаешь, что делаешь.
+    
+    Chinatsu.frown: Уме играет с силами, которые не понимает.
+    
+    @choice "Поговорить о беспокойствах" goto:.concerns
+    @choice "Вернуться к карте" goto:.map
+@elseif artifact_choice=="keep"
+    @char Chinatsu.normal pos:50
+    
+    Chinatsu.normal: Привет, {player_name}. Как справляешься с силой артефакта?
+    
+    @choice "Рассказать о своих ощущениях" goto:.feelings
+    @choice "Вернуться к карте" goto:.map
+@endif
+
+@stop
+
+# protection
+Chinatsu.happy: Мы создали многослойную защиту в подземных хранилищах.
+
+Chinatsu.talk: Даже если кто-то найдет ключ, активировать его будет невозможно.
+
+Player: А если он понадобится в экстренной ситуации?
+
+Chinatsu.normal: У нас есть протокол экстренного доступа. Но надеюсь, он не пригодится.
+
+@goto .map
+
+# concerns
+Chinatsu.upset: Я чувствую изменения в магическом поле академии.
+
+Chinatsu.frown: Уме открывает врата, не понимая последствий.
+
+Player: Может, стоит поговорить с ней?
+
+Chinatsu.normal: Она не станет слушать. Остается только наблюдать и быть готовой.
+
+@goto .map
+
+# feelings
+Chinatsu.normal: Артефакт требует большой ментальной силы.
+
+Player: Иногда я чувствую, как он влияет на мои сны.
+
+Chinatsu.blush: Если станет слишком сложно, я всегда готова помочь.
+
+# map
+@showUI MapUI
+@stopBgm
+@stop

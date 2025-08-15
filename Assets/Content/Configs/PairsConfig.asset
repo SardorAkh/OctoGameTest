@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd8c927b558403b836ed336925907fd, type: 3}
+  m_Name: PairsConfig
+  m_EditorClassIdentifier: 
+  <CardSprites>k__BackingField:
+  - {fileID: -2046225394, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: 532267678, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: -1691214403, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: 1455626624, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: 409392911, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: 1886407264, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: -1462542006, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: -470698854, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: -462142816, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: -1792906936, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: 1284874051, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: -1606773417, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: 784434664, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: -1174072675, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: -1852021345, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: -738261313, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: -999515775, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: 1170482161, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: 604984427, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: -1929809831, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: -202488692, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: 413737746, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: -1410880794, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: 360079856, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: 1630239432, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  - {fileID: -117950240, guid: c51c8806a2ab0e14d870eb34ac418866, type: 3}
+  <PairsCount>k__BackingField: 6
