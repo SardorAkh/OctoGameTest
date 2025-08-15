@@ -1,4 +1,5 @@
 ; Начальный сценарий - выбор имени и завязка
+@stopBgm
 @back Library time:0
 @bgm Mystery_Theme volume:0.6
 
@@ -25,9 +26,8 @@
 Говорят, что в её стенах скрыты древние артефакты...
 
 Но сейчас тебе нужно освоиться и найти библиотеку для получения учебников.
-
 @showUI QuestSystemUI
 @startQuest questId:"main_quest"
-
+@stopBgm
 @wait 1
 @goto Location1_Initial

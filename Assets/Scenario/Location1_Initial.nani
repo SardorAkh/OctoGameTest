@@ -1,4 +1,4 @@
-; Локация 1 - Первая встреча с НПЦ-1 (Ume)
+@stopBgm
 @back Library time:2
 @bgm Library_Theme volume:0.5
 
@@ -93,5 +93,8 @@ Player: Я понял. Увидимся позже.
 
 @hide Ume time:1
 
-@wait 2
-@goto Location2_Meeting
+Теперь ты можешь свободно перемещаться по академии.
+
+@showUI MapUI
+@stopBgm
+@stop

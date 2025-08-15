@@ -1,0 +1,61 @@
+; Location1_Static.nani - Статичная версия библиотеки после завершения квеста
+@stopBgm time:0.5
+@back Library time:2
+@bgm Library_Theme volume:0.5
+
+@char Ume.normal pos:50
+
+@if artifact_choice=="ume"
+    Ume.happy: {player_name}! Как дела с изучением древних знаний?
+    
+    Ume.talk: Кристальный Ключ открывает всё новые тайны каждый день!
+    
+    @choice "Расспросить о новых открытиях" goto:.discoveries
+    @choice "Вернуться к карте" goto:.map
+@elseif artifact_choice=="chinatsu"
+    Ume.frown: {player_name}... ты сделал свой выбор.
+    
+    Ume.normal: Я не держу зла, но всё могло быть иначе.
+    
+    @choice "Поговорить с Уме" goto:.talk_ume
+    @choice "Вернуться к карте" goto:.map
+@elseif artifact_choice=="keep"
+    Ume.normal: {player_name}, как дела с артефактом?
+    
+    Ume.talk: Предложение о сотрудничестве всё ещё актуально.
+    
+    @choice "Обсудить сотрудничество" goto:.cooperation
+    @choice "Вернуться к карте" goto:.map
+@endif
+
+@stop
+
+# discoveries
+Ume.happy: С помощью ключа я открыла доступ к древней библиотеке теней!
+
+Ume.talk: Там хранятся заклинания, о которых забыли тысячи лет назад.
+
+Player: Это безопасно?
+
+Ume.normal: Пока что всё под контролем. Но знания... они безграничны!
+
+@goto .map
+
+# talk_ume
+Ume.frown: Чинацу слишком осторожна. Прогресс требует смелости.
+
+Ume.normal: Но я понимаю твои мотивы. Возможно, со временем...
+
+@goto .map
+
+# cooperation
+Ume.normal: Ты мудро поступил, оставив артефакт себе.
+
+Ume.talk: Вместе мы могли бы исследовать его силу безопасно.
+
+Player: Может быть, когда-нибудь в будущем.
+
+# map
+@showUI MapUI
+@stopBgm
+@stop

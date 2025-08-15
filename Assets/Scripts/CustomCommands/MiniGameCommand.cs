@@ -14,7 +14,6 @@ namespace CustomCommands
         public override async UniTask ExecuteAsync(AsyncToken asyncToken = default)
         {
             var service = Engine.GetService<MiniGameService>();
-            Debug.Log(service);
             var hasWon = await service.StartGameAsync(GameId);
 
             if (Assigned(ResultVariable))

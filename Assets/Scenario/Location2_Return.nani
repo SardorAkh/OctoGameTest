@@ -1,4 +1,4 @@
-; Локация 2 - Возврат, монолог (НПЦ-2 исчез)
+@stopBgm
 @back Classroom time:2
 @bgm Office_Theme volume:0.4
 
@@ -75,5 +75,7 @@ Player: Что это значит?
 
 Пора вернуться в библиотеку и принять окончательное решение.
 
-@wait 2
-@goto Location1_Final
+@showUI MapUI
+
+@stopBgm
+@stop

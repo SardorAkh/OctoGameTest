@@ -1,0 +1,82 @@
+@stopBgm
+@back Classroom time:2
+@bgm School_Theme volume:0.5
+
+@char Chinatsu.normal pos:50
+
+Chinatsu.normal: Привет, {player_name}. Как дела с поисками?
+
+@choice "Еще не ходил в кабинет директора" goto:.not_yet
+@choice "Хочу еще раз поговорить о ключе" goto:.about_key
+@choice "Ты действительно не доверяешь Уме?" goto:.about_ume
+@stop
+
+# not_yet
+Player: Еще не успел дойти до кабинета директора.
+
+@char Chinatsu.talk
+
+Chinatsu.talk: Не медли слишком долго. Кто знает, что задумала Уме.
+
+@char Chinatsu.normal
+
+Chinatsu.normal: Но и не торопись. Будь осторожен там.
+
+@goto .end
+
+# about_key
+Player: Расскажи еще раз про опасность Кристального Ключа.
+
+@char Chinatsu.frown
+
+Chinatsu.frown: Этот артефакт создали древние маги для путешествий между мирами.
+
+@char Chinatsu.upset
+
+Chinatsu.upset: Но они не понимали, что некоторые врата лучше не открывать.
+
+@char Chinatsu.normal
+
+Chinatsu.normal: В других мирах могут быть сущности, которые захотят проникнуть в наш.
+
+Player: И что произойдет, если их выпустить?
+
+@char Chinatsu.angry_talk
+
+Chinatsu.angry_talk: Хаос. Разрушение. Конец нашего мира, каким мы его знаем.
+
+@goto .end
+
+# about_ume
+Player: Может быть, Уме не так плоха, как ты думаешь?
+
+@char Chinatsu.frown
+
+Chinatsu.frown: Я не говорю, что она злая. Просто... ослепленная.
+
+@char Chinatsu.normal
+
+Chinatsu.normal: Уме верит, что любые знания стоят риска.
+
+@char Chinatsu.upset
+
+Chinatsu.upset: Но некоторые цены слишком высоки для оплаты.
+
+Player: А что, если ключ можно использовать безопасно?
+
+@char Chinatsu.talk
+
+Chinatsu.talk: Возможно... но для этого нужна невероятная мудрость и сдержанность.
+
+@char Chinatsu.blush
+
+Chinatsu.blush: Качества, которые редко встречаются вместе с жаждой знаний.
+
+# end
+Player: Понятно. Спасибо за честность.
+
+@hide Chinatsu time:1
+
+@showUI MapUI
+@stopBgm
+@stop

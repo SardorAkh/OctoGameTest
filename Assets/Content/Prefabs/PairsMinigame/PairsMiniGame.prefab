@@ -134,6 +134,11 @@ MonoBehaviour:
   cardPrefab: {fileID: 7069569939490070050, guid: 1bd0fdb5d662c8f439911689765bb59d, type: 3}
   closeButton: {fileID: 4960577851294866282}
   pairsConfig: {fileID: 11400000, guid: 4dab342b2a9edc347808d4c1f641ee95, type: 2}
+  canvasGroup: {fileID: 97628996684588636}
+  gamePanel: {fileID: 3898545300138073985}
+  showDuration: 0.5
+  hideDuration: 0.3
+  cardSpawnDelay: 0.1
 --- !u!1 &3637399108905993142
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
+  m_Color: {r: 0.5149964, g: 0.6698113, b: 0.5762296, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

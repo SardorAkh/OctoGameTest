@@ -17,7 +17,7 @@ MonoBehaviour:
     Resources:
     - name: Dialogue
       pathPrefix: TextPrinters
-      guid: 1bc08ccd31adff6439e97161aa6e1d8b
+      guid: 4f8364f64140c3d43a9d3c955a19d592
   - Id: TextPrinters/8cd9f69f-5f3d-43c5-bf40-355d4066ac01
     Resources:
     - name: Fullscreen
@@ -42,7 +42,7 @@ MonoBehaviour:
     Resources:
     - name: ButtonList
       pathPrefix: ChoiceHandlers
-      guid: 1f6aa29000e839c409e6a9c0704adc96
+      guid: 3f791e5d77be51e42bd2fcffa259b12c
   - Id: ChoiceHandlers/da7b36d2-639d-4a21-a36f-0e0b99de589c
     Resources:
     - name: ButtonArea
@@ -131,10 +131,10 @@ MonoBehaviour:
       guid: f5aae572225ee1b4c96d1a17fc5cb073
     - name: TitleUI
       pathPrefix: UI
-      guid: 4b121aa1be1b7e04480b452c595ff17a
+      guid: 7b96141fb2216b244847ab2f951adef4
     - name: VariableInputUI
       pathPrefix: UI
-      guid: bb95f484e341dcd4391a572f22b7d067
+      guid: e05c2f3759c83b44d8f4a7c35359ad0b
     - name: PauseUI
       pathPrefix: UI
       guid: 480f5db62ea305c46b89a86496d2a0c9
@@ -147,6 +147,9 @@ MonoBehaviour:
     - name: QuestSystemUI
       pathPrefix: UI
       guid: 7838c969026eeed4aab40c910b08d455
+    - name: MapUI
+      pathPrefix: UI
+      guid: daf9d654e60ef5b4bb054dfe1aaaf5b3
   - Id: CharacterAvatars
     Resources: []
   - Id: Characters/f348d780-972f-4d1b-99d8-3a98846bc957
@@ -425,6 +428,9 @@ MonoBehaviour:
     - name: Principal_Office
       pathPrefix: Backgrounds/MainBackground
       guid: 34e706d8d5dd7f145879c5e2708c9d1a
+    - name: School_Yard_Day
+      pathPrefix: Backgrounds/MainBackground
+      guid: b14661dba258e5a47953fcf900f650c7
   - Id: Audio
     Resources:
     - name: Library_Theme
@@ -489,5 +495,8 @@ MonoBehaviour:
     - name: Epilogue
       pathPrefix: Scripts
       guid: 37e5fcdd0a65e3041a38f5efd32d1a10
+    - name: Title
+      pathPrefix: Scripts
+      guid: cb5a3c20ed7e8a641ba65db354d3cbef
   - Id: Characters/6cab344d-8dba-49f1-a2fd-d468640b43c9
     Resources: []

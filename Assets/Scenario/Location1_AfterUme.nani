@@ -1,0 +1,62 @@
+@stopBgm
+@back Library time:2
+@bgm Library_Theme volume:0.5
+
+@char Ume.normal pos:50
+
+Ume.normal: Как дела, {player_name}? Уже нашел Чинацу?
+
+@choice "Еще не был в 3-А классе" goto:.not_yet
+@choice "Просто зашел поздороваться" goto:.hello
+@choice "Напомни, что мне нужно делать" goto:.remind
+@stop
+
+# not_yet
+Player: Еще не успел дойти до 3-А класса.
+
+@char Ume.talk
+
+Ume.talk: Не затягивай. Чинацу может многое рассказать о Кристальном Ключе.
+
+@char Ume.normal
+
+Ume.normal: Только будь с ней осторожен. Она... особенная.
+
+@goto .end
+
+# hello
+Player: Просто зашел поздороваться.
+
+@char Ume.happy
+
+Ume.happy: Это мило с твоей стороны!
+
+@char Ume.normal
+
+Ume.normal: Но не забывай о нашей цели. Артефакт не найдет себя сам.
+
+@goto .end
+
+# remind
+Player: Напомни, что именно мне нужно делать?
+
+@char Ume.talk
+
+Ume.talk: Отправляйся в 3-А класс и найди студентку по имени Чинацу.
+
+@char Ume.normal
+
+Ume.normal: Она может знать больше о местонахождении Кристального Ключа.
+
+@char Ume.frown
+
+Ume.frown: Только не позволяй ей сбить тебя с толку своими предупреждениями.
+
+# end
+Player: Понял, увидимся позже.
+
+@hide Ume time:1
+
+@showUI MapUI
+@stopBgm
+@stop

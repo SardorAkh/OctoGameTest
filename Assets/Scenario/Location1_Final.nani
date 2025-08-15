@@ -1,4 +1,5 @@
 ; Локация 1 - Финальный выбор
+@stopBgm
 @back Library time:2
 @bgm Mystery_Theme volume:0.6
 
@@ -142,6 +143,13 @@ Chinatsu.normal: Возможно... ты прав.
 
 Chinatsu.blush: В тебе действительно есть что-то особенное.
 
+@hideUI QuestSystemUI
+Квест завершен! Квестовый интерфейс больше не нужен.
+
+Но карта локаций остается доступной для свободного перемещения.
+
+
 # end
+@stopBgm
 @wait 2
 @goto Epilogue

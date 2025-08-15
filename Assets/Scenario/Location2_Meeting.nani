@@ -1,4 +1,4 @@
-; Локация 2 - Встреча с НПЦ-2 (Chinatsu), мини-игра
+@stopBgm
 @back Classroom time:2
 @bgm School_Theme volume:0.5
 
@@ -68,12 +68,14 @@ Player: Хорошо, давай попробуем.
 
 Chinatsu.happy: Отлично! Правила простые - найди все пары карточек.
 
+@stopBgm time:0.5
 @bgm Sports_Theme volume:0.4
 
 @minigame gameid:"pairs_game" resultvar:"minigame_result"
 
 @completeTask questId:"main_quest" task:"play_minigame"
 
+@stopBgm time:0.5
 @bgm School_Theme volume:0.5
 
 @if minigame_result=="true"
@@ -155,5 +157,8 @@ Chinatsu.talk: Удачи тебе, {player_name}. Мы еще встретим�
 
 @hide Chinatsu time:1
 
-@wait 2
-@goto Location3_Artifact
+Теперь кабинет директора открыт для посещения.
+
+@showUI MapUI
+@stopBgm
+@stop

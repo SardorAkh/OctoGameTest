@@ -1,4 +1,4 @@
-; Локация 3 - Поиск интерактивного предмета
+@stopBgm
 @back Principal_Office time:2
 @bgm Mystery_Theme volume:0.6
 
@@ -48,7 +48,7 @@
 
 Ты чувствуешь, как энергия артефакта резонирует с твоей аурой.
 
-@choice "Взять кристалл" goto:.take
+@choice "Приблизиться к кристаллу" goto:.take
 @choice "Не трогать, осмотреть внимательнее" goto:.examine
 @stop
 
@@ -62,8 +62,16 @@
 Но медлить больше нельзя - нужно принять решение.
 
 # take
+@hidePrinter
+
+@choice handler:ButtonArea button:CrystalChoiceButton pos:0,0 goto:.crystal_clicked
+
+@stop
+
+# crystal_clicked
 @completeTask questId:"main_quest" task:"find_artifact"
 
+@showPrinter
 Ты осторожно берешь кристалл в руки.
 
 В момент касания через тебя пробегает волна энергии!
@@ -79,10 +87,14 @@
 Или случайно разрушить реальность.
 
 @set has_artifact=true
+@set location3_blocked=true
 
 Кристалл исчезает в твоем кармане, словно сливаясь с твоей энергией.
 
-Пора возвращаться и решать, что делать дальше.
+Внезапно кабинет начинает тускнеть... Магическая энергия покидает это место.
 
+Больше здесь делать нечего. Эта локация опустела.
+
+@stopBgm
 @wait 2
 @goto Location2_Return
