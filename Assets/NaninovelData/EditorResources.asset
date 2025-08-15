@@ -498,5 +498,23 @@ MonoBehaviour:
     - name: Title
       pathPrefix: Scripts
       guid: cb5a3c20ed7e8a641ba65db354d3cbef
+    - name: Location1_AfterChinatsu
+      pathPrefix: Scripts
+      guid: 10ba729e22630494198b76e8a43bd3bd
+    - name: Location1_AfterUme
+      pathPrefix: Scripts
+      guid: 322851184d041a247899606b0f58a394
+    - name: Location1_Static
+      pathPrefix: Scripts
+      guid: 38e276dba2095084ba70e3dc963f90af
+    - name: Location2_AfterMeeting
+      pathPrefix: Scripts
+      guid: 310d6c4ff99fbd8439c95d695035c3c5
+    - name: Location2_AfterMinigame
+      pathPrefix: Scripts
+      guid: 158c1190dc75bfe41a9eb12d3e0c6d5c
+    - name: Location2_Static
+      pathPrefix: Scripts
+      guid: d4f7b94eae43b8d4db07398754a0509a
   - Id: Characters/6cab344d-8dba-49f1-a2fd-d468640b43c9
     Resources: []
